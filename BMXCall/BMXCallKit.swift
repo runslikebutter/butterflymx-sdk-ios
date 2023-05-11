@@ -9,6 +9,7 @@
 import Foundation
 import BMXCore
 import PushKit
+import UIKit
 
 public enum CallCancelReason {
     case answeredByOthers, canceledByCaller

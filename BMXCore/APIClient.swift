@@ -6,8 +6,10 @@
 //  Copyright © 2018 ButterflyMX. All rights reserved.
 //
 
+import Foundation
 import Alamofire
 import Japx
+import JapxAlamofire
 
 public class APIClient {
     static let sessionManager = Session()
