@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (5.4.4)
+  - Japx/Alamofire (4.0.0):
+    - Alamofire
+    - Japx/Core
+  - Japx/Core (4.0.0)
+  - OAuthSwift (2.1.0)
+  - SVProgressHUD (2.2.5)
+  - TwilioVideo (5.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Japx/Alamofire
+  - OAuthSwift (= 2.1.0)
+  - SVProgressHUD
+  - TwilioVideo (~> 5.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Japx
+    - OAuthSwift
+    - SVProgressHUD
+    - TwilioVideo
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  Japx: 4bb2d79d023af5e7ea44c0a2875c4b070080e111
+  OAuthSwift: ab1675598273e04355e0282459c328e65c9ddacd
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TwilioVideo: 56aa8ca29205fff9ba69e167f818febd2d41ff95
+
+PODFILE CHECKSUM: 3ec12a35a14ee671f8fb22f869704ae4ac8f2d8d
+
+COCOAPODS: 1.11.3

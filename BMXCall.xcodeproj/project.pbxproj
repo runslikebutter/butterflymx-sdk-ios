@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		421F59D253706D74AD7B1BAB /* Pods_BMXCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF58C0AF02727B96E111CC6 /* Pods_BMXCall.framework */; };
+		9C34B31E26EF8B7600BE181A /* TwilioIncomingCallProcessor+RemoteParticipantDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34B31D26EF8B7600BE181A /* TwilioIncomingCallProcessor+RemoteParticipantDelegate.swift */; };
+		9C34B32026EF9ADA00BE181A /* CallStatesAndEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34B31F26EF9ADA00BE181A /* CallStatesAndEvents.swift */; };
+		9C34B32226EFFAF800BE181A /* CallStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34B32126EFFAF800BE181A /* CallStatus.swift */; };
+		9C5A02E826DEC04B00558366 /* IncomingCallProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A02E726DEC04B00558366 /* IncomingCallProcessor.swift */; };
+		9C5A02EC26E724E300558366 /* BMXCallKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A02EB26E724E300558366 /* BMXCallKit.swift */; };
+		9C5A02F026E7EC5400558366 /* AudioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5A02EF26E7EC5400558366 /* AudioSessionManager.swift */; };
+		9CDD7E8826EB04C90063C1A7 /* TwilioSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD7E8726EB04C90063C1A7 /* TwilioSettings.swift */; };
+		9CDD7E8A26EBFFB20063C1A7 /* IncomingViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD7E8926EBFFB20063C1A7 /* IncomingViewProtocols.swift */; };
+		9CDD7E9126EF8B090063C1A7 /* TwilioIncomingCallProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD7E9026EF8B090063C1A7 /* TwilioIncomingCallProcessor.swift */; };
+		9CE64C9C270563AB0038EA1C /* ProviderTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE64C9B270563AB0038EA1C /* ProviderTokens.swift */; };
+		C301989E252B701200D0B891 /* BMXCall.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FB931224BAAF600D58A4E /* BMXCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C322092422535EB100C2A1C0 /* SimpleStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322092322535EB100C2A1C0 /* SimpleStateMachine.swift */; };
+		C35FBD48224E41D700D58A4E /* CallNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FBD3F224E1AA300D58A4E /* CallNotifications.swift */; };
+		C35FBD4C224E41D700D58A4E /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FBD35224BB75C00D58A4E /* CallModel.swift */; };
+		C3D092192534903400C6E69C /* BMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C322092122535A5D00C2A1C0 /* BMXCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2EF58C0AF02727B96E111CC6 /* Pods_BMXCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMXCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69087AF4C11E8D53FF5CF356 /* Pods-BMXCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMXCall.release.xcconfig"; path = "Target Support Files/Pods-BMXCall/Pods-BMXCall.release.xcconfig"; sourceTree = "<group>"; };
+		9C34B31D26EF8B7600BE181A /* TwilioIncomingCallProcessor+RemoteParticipantDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwilioIncomingCallProcessor+RemoteParticipantDelegate.swift"; sourceTree = "<group>"; };
+		9C34B31F26EF9ADA00BE181A /* CallStatesAndEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallStatesAndEvents.swift; sourceTree = "<group>"; };
+		9C34B32126EFFAF800BE181A /* CallStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallStatus.swift; sourceTree = "<group>"; };
+		9C5A02E726DEC04B00558366 /* IncomingCallProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingCallProcessor.swift; sourceTree = "<group>"; };
+		9C5A02EB26E724E300558366 /* BMXCallKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMXCallKit.swift; sourceTree = "<group>"; };
+		9C5A02EF26E7EC5400558366 /* AudioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSessionManager.swift; sourceTree = "<group>"; };
+		9CDD7E8726EB04C90063C1A7 /* TwilioSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwilioSettings.swift; sourceTree = "<group>"; };
+		9CDD7E8926EBFFB20063C1A7 /* IncomingViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingViewProtocols.swift; sourceTree = "<group>"; };
+		9CDD7E9026EF8B090063C1A7 /* TwilioIncomingCallProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwilioIncomingCallProcessor.swift; sourceTree = "<group>"; };
+		9CE64C9B270563AB0038EA1C /* ProviderTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderTokens.swift; sourceTree = "<group>"; };
+		C322092122535A5D00C2A1C0 /* BMXCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BMXCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C322092322535EB100C2A1C0 /* SimpleStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleStateMachine.swift; sourceTree = "<group>"; };
+		C35FB92E224BAAF600D58A4E /* BMXCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMXCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C35FB931224BAAF600D58A4E /* BMXCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMXCall.h; sourceTree = "<group>"; };
+		C35FB932224BAAF600D58A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C35FBD35224BB75C00D58A4E /* CallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
+		C35FBD3F224E1AA300D58A4E /* CallNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallNotifications.swift; sourceTree = "<group>"; };
+		D708AB7FC33B8B06077A343A /* Pods-BMXCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMXCall.debug.xcconfig"; path = "Target Support Files/Pods-BMXCall/Pods-BMXCall.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C35FB92B224BAAF600D58A4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3D092192534903400C6E69C /* BMXCore.framework in Frameworks */,
+				421F59D253706D74AD7B1BAB /* Pods_BMXCall.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B401AE9268FA1CD70642F46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D708AB7FC33B8B06077A343A /* Pods-BMXCall.debug.xcconfig */,
+				69087AF4C11E8D53FF5CF356 /* Pods-BMXCall.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C34B32726F22A3600BE181A /* WebRTC */ = {
+			isa = PBXGroup;
+			children = (
+				9C34B31F26EF9ADA00BE181A /* CallStatesAndEvents.swift */,
+				C35FBD3F224E1AA300D58A4E /* CallNotifications.swift */,
+				9CDD7E9026EF8B090063C1A7 /* TwilioIncomingCallProcessor.swift */,
+				9C34B31D26EF8B7600BE181A /* TwilioIncomingCallProcessor+RemoteParticipantDelegate.swift */,
+				9CDD7E8726EB04C90063C1A7 /* TwilioSettings.swift */,
+			);
+			path = WebRTC;
+			sourceTree = "<group>";
+		};
+		9C34B32826F22A7800BE181A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9C5A02EF26E7EC5400558366 /* AudioSessionManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9C34B32926F22AC500BE181A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C35FBD35224BB75C00D58A4E /* CallModel.swift */,
+				9C34B32126EFFAF800BE181A /* CallStatus.swift */,
+				9CE64C9B270563AB0038EA1C /* ProviderTokens.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9C34B32A26F23ED700BE181A /* CallProcessors */ = {
+			isa = PBXGroup;
+			children = (
+				9C34B32726F22A3600BE181A /* WebRTC */,
+				9C5A02E726DEC04B00558366 /* IncomingCallProcessor.swift */,
+				C322092322535EB100C2A1C0 /* SimpleStateMachine.swift */,
+			);
+			path = CallProcessors;
+			sourceTree = "<group>";
+		};
+		AF8D920325D61DDDA821DEA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C322092122535A5D00C2A1C0 /* BMXCore.framework */,
+				2EF58C0AF02727B96E111CC6 /* Pods_BMXCall.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C35FB924224BAAF600D58A4E = {
+			isa = PBXGroup;
+			children = (
+				C35FB930224BAAF600D58A4E /* BMXCall */,
+				C35FB92F224BAAF600D58A4E /* Products */,
+				5B401AE9268FA1CD70642F46 /* Pods */,
+				AF8D920325D61DDDA821DEA1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C35FB92F224BAAF600D58A4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C35FB92E224BAAF600D58A4E /* BMXCall.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C35FB930224BAAF600D58A4E /* BMXCall */ = {
+			isa = PBXGroup;
+			children = (
+				9C34B32A26F23ED700BE181A /* CallProcessors */,
+				9C34B32926F22AC500BE181A /* Models */,
+				9C34B32826F22A7800BE181A /* Helpers */,
+				9CDD7E8926EBFFB20063C1A7 /* IncomingViewProtocols.swift */,
+				9C5A02EB26E724E300558366 /* BMXCallKit.swift */,
+				C35FB931224BAAF600D58A4E /* BMXCall.h */,
+				C35FB932224BAAF600D58A4E /* Info.plist */,
+			);
+			path = BMXCall;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C35FB929224BAAF600D58A4E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C301989E252B701200D0B891 /* BMXCall.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C35FB92D224BAAF600D58A4E /* BMXCall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C35FB936224BAAF600D58A4E /* Build configuration list for PBXNativeTarget "BMXCall" */;
+			buildPhases = (
+				C2A3E1797D26E7478C3A53AA /* [CP] Check Pods Manifest.lock */,
+				C35FB929224BAAF600D58A4E /* Headers */,
+				C35FB92A224BAAF600D58A4E /* Sources */,
+				C35FB92B224BAAF600D58A4E /* Frameworks */,
+				C35FB92C224BAAF600D58A4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BMXCall;
+			productName = ButterflyMXCallSDK;
+			productReference = C35FB92E224BAAF600D58A4E /* BMXCall.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C35FB925224BAAF600D58A4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = ButterflyMX;
+				TargetAttributes = {
+					C35FB92D224BAAF600D58A4E = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = C35FB928224BAAF600D58A4E /* Build configuration list for PBXProject "BMXCall" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C35FB924224BAAF600D58A4E;
+			productRefGroup = C35FB92F224BAAF600D58A4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C35FB92D224BAAF600D58A4E /* BMXCall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C35FB92C224BAAF600D58A4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C2A3E1797D26E7478C3A53AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BMXCall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C35FB92A224BAAF600D58A4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CDD7E8826EB04C90063C1A7 /* TwilioSettings.swift in Sources */,
+				C35FBD48224E41D700D58A4E /* CallNotifications.swift in Sources */,
+				9C5A02F026E7EC5400558366 /* AudioSessionManager.swift in Sources */,
+				9C34B32226EFFAF800BE181A /* CallStatus.swift in Sources */,
+				C322092422535EB100C2A1C0 /* SimpleStateMachine.swift in Sources */,
+				9C5A02EC26E724E300558366 /* BMXCallKit.swift in Sources */,
+				9CDD7E8A26EBFFB20063C1A7 /* IncomingViewProtocols.swift in Sources */,
+				9CE64C9C270563AB0038EA1C /* ProviderTokens.swift in Sources */,
+				9CDD7E9126EF8B090063C1A7 /* TwilioIncomingCallProcessor.swift in Sources */,
+				9C5A02E826DEC04B00558366 /* IncomingCallProcessor.swift in Sources */,
+				9C34B32026EF9ADA00BE181A /* CallStatesAndEvents.swift in Sources */,
+				C35FBD4C224E41D700D58A4E /* CallModel.swift in Sources */,
+				9C34B31E26EF8B7600BE181A /* TwilioIncomingCallProcessor+RemoteParticipantDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C35FB934224BAAF600D58A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C35FB935224BAAF600D58A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C35FB937224BAAF600D58A4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D708AB7FC33B8B06077A343A /* Pods-BMXCall.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 72UNXQ9M6U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = "i386 x86_64";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "i386 arm64";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"PJ_AUTOCONF=1",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/BMXCall/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				MARKETING_VERSION = 2.1.1;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.butterflymx.bmxcall;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = NO;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C35FB938224BAAF600D58A4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69087AF4C11E8D53FF5CF356 /* Pods-BMXCall.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 72UNXQ9M6U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = YES;
+				"EXCLUDED_ARCHS[sdk=*]" = "i386 x86_64";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "i386 arm64";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"PJ_AUTOCONF=1",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "$(SRCROOT)/BMXCall/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				MARKETING_VERSION = 2.1.1;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.butterflymx.bmxcall;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = NO;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C35FB928224BAAF600D58A4E /* Build configuration list for PBXProject "BMXCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C35FB934224BAAF600D58A4E /* Debug */,
+				C35FB935224BAAF600D58A4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C35FB936224BAAF600D58A4E /* Build configuration list for PBXNativeTarget "BMXCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C35FB937224BAAF600D58A4E /* Debug */,
+				C35FB938224BAAF600D58A4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C35FB925224BAAF600D58A4E /* Project object */;
+}
