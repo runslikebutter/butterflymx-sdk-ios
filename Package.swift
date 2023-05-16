@@ -4,7 +4,7 @@
 import PackageDescription
 
 var package = Package(
-    name: "BMXSDK",
+    name: "ButterflyMX",
     platforms: [
         .iOS(.v13)
     ],
