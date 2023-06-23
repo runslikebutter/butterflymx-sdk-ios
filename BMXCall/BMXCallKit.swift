@@ -73,11 +73,6 @@ public class BMXCallKit {
             guard let self = self else { return }
             switch result {
             case .success(let call):
-                guard call.attributes?.status == Call.Status.initializing.rawValue else {
-                    self.processor?.processCall(call: call, callType: callType)
-                    return
-                }
-
                 guard let callProvider = call.callProvider else {
                     completion(.failure(.unableToProcessResponse(message: "No call provider")))
                     return
@@ -90,6 +85,11 @@ public class BMXCallKit {
                 
                 self.processor = callProcessor
                 self.incomingCallPresenter?.delegate = self.processor
+                
+                guard call.attributes?.status == Call.Status.initializing.rawValue else {
+                    self.processor?.processCall(call: call, callType: callType)
+                    return
+                }
                 
                 if call.callProvider == .twilio {
                     self.handleWebRtcCall(callId: guid, completion: completion) {providerToken in
