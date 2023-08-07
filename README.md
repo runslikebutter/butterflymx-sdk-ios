@@ -6,7 +6,7 @@ If your project utilizes its own Package.swift file, you have the option to incl
 1. Include the ButterflyMX package in your list of dependencies:
 ```
 dependencies: [
-    .package(name: "ButterflyMX", url: "https://github.com/runslikebutter/butterflymx-sdk-ios.git", .upToNextMajor(from: "2.3.1"))
+    .package(url: "https://github.com/runslikebutter/butterflymx-sdk-ios.git", .upToNextMajor(from: "2.3.1"))
 ],
 ```
 2. Add a dependency on the BmxCore and BmxCall products to the targets that will use ButterflyMX within your application:
@@ -14,8 +14,8 @@ dependencies: [
 .target(
     name: "MyApp",
     dependencies: [
-        .product(name: "BmxCore", package: "ButterflyMX"),
-        .product(name: "BmxCall", package: "ButterflyMX")
+        .product(name: "BMXCore", package: "butterflymx-sdk-ios"),
+        .product(name: "BMXCall", package: "butterflymx-sdk-ios")
     ]
 )
 ```
