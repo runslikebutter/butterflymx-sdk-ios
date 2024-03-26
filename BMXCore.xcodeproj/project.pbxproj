@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,19 +22,24 @@
 		C32CEAD62254D04D00D7BB73 /* PanelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CEAD42254D04900D7BB73 /* PanelModel.swift */; };
 		C32CEAD72254D04D00D7BB73 /* UnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CEAD52254D04D00D7BB73 /* UnitModel.swift */; };
 		C32CEADD2256012800D7BB73 /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CEADC2256012800D7BB73 /* BuildingModel.swift */; };
+		C3728F682BB2C7C700915D36 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F672BB2C7C700915D36 /* Alamofire */; };
+		C3728F6A2BB2C7C700915D36 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F692BB2C7C700915D36 /* AlamofireDynamic */; };
+		C3728F6D2BB2C7DB00915D36 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F6C2BB2C7DB00915D36 /* OAuthSwift */; };
+		C3728F702BB2C7E900915D36 /* Japx in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F6F2BB2C7E900915D36 /* Japx */; };
+		C3728F722BB2C7E900915D36 /* JapxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F712BB2C7E900915D36 /* JapxAlamofire */; };
+		C3728F742BB2C7E900915D36 /* JapxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F732BB2C7E900915D36 /* JapxMoya */; };
+		C3728F762BB2C7E900915D36 /* JapxRxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F752BB2C7E900915D36 /* JapxRxAlamofire */; };
+		C3728F782BB2C7E900915D36 /* JapxRxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F772BB2C7E900915D36 /* JapxRxMoya */; };
 		C390814121F71EBC00A4E884 /* TokensModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390814021F71EBC00A4E884 /* TokensModel.swift */; };
 		C39809B224AE1A4D0002D9A9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FBD3D224E1A5A00D58A4E /* Utils.swift */; };
 		C3B776DC236AE0C50060AEAC /* TenantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B776DB236AE0C50060AEAC /* TenantModel.swift */; };
 		C3C2322321F2116300A84483 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C2322221F2116300A84483 /* Keychain.swift */; };
 		C3C2324B21F604BD00A84483 /* DiskCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C2324A21F604BD00A84483 /* DiskCaching.swift */; };
 		C3C93B6121F9E14200D75F2E /* BMXDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C93B6021F9E14200D75F2E /* BMXDoor.swift */; };
-		DD915F145930C0FF6A85E8A3 /* Pods_BMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D8751CE5002E862C5A0E22 /* Pods_BMXCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		172DFE8A150125D0C19E6596 /* Pods-BMXCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMXCore.debug.xcconfig"; path = "Target Support Files/Pods-BMXCore/Pods-BMXCore.debug.xcconfig"; sourceTree = "<group>"; };
 		9CD4A2602667327E00880FC0 /* TenantIntegrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantIntegrationModel.swift; sourceTree = "<group>"; };
-		A3D8751CE5002E862C5A0E22 /* Pods_BMXCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMXCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B918E281216F222F00A2A76D /* OAuth2Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Handler.swift; sourceTree = "<group>"; };
 		B96B3BAF216EBDE90037F586 /* BMXCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMXCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96B3BB2216EBDE90037F586 /* ButterflyMXSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButterflyMXSDK.h; sourceTree = "<group>"; };
@@ -58,7 +63,6 @@
 		C3C2322221F2116300A84483 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		C3C2324A21F604BD00A84483 /* DiskCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCaching.swift; sourceTree = "<group>"; };
 		C3C93B6021F9E14200D75F2E /* BMXDoor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMXDoor.swift; sourceTree = "<group>"; };
-		E8C479EF5127D326E1F2877F /* Pods-BMXCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMXCore.release.xcconfig"; path = "Target Support Files/Pods-BMXCore/Pods-BMXCore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD915F145930C0FF6A85E8A3 /* Pods_BMXCore.framework in Frameworks */,
+				C3728F682BB2C7C700915D36 /* Alamofire in Frameworks */,
+				C3728F742BB2C7E900915D36 /* JapxMoya in Frameworks */,
+				C3728F6A2BB2C7C700915D36 /* AlamofireDynamic in Frameworks */,
+				C3728F6D2BB2C7DB00915D36 /* OAuthSwift in Frameworks */,
+				C3728F702BB2C7E900915D36 /* Japx in Frameworks */,
+				C3728F782BB2C7E900915D36 /* JapxRxMoya in Frameworks */,
+				C3728F722BB2C7E900915D36 /* JapxAlamofire in Frameworks */,
+				C3728F762BB2C7E900915D36 /* JapxRxAlamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,8 +89,6 @@
 			children = (
 				B96B3BB1216EBDE90037F586 /* BMXCore */,
 				B96B3BB0216EBDE90037F586 /* Products */,
-				E28746056AB57F9B90EBF660 /* Pods */,
-				C5940E7C614634AC98A10763 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,23 +162,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C5940E7C614634AC98A10763 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A3D8751CE5002E862C5A0E22 /* Pods_BMXCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E28746056AB57F9B90EBF660 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				172DFE8A150125D0C19E6596 /* Pods-BMXCore.debug.xcconfig */,
-				E8C479EF5127D326E1F2877F /* Pods-BMXCore.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -188,7 +180,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B96B3BB7216EBDEA0037F586 /* Build configuration list for PBXNativeTarget "BMXCore" */;
 			buildPhases = (
-				E6D84F88905DACDB789044B8 /* [CP] Check Pods Manifest.lock */,
 				B96B3BAA216EBDE90037F586 /* Headers */,
 				B96B3BAB216EBDE90037F586 /* Sources */,
 				B96B3BAC216EBDE90037F586 /* Frameworks */,
@@ -199,6 +190,16 @@
 			dependencies = (
 			);
 			name = BMXCore;
+			packageProductDependencies = (
+				C3728F672BB2C7C700915D36 /* Alamofire */,
+				C3728F692BB2C7C700915D36 /* AlamofireDynamic */,
+				C3728F6C2BB2C7DB00915D36 /* OAuthSwift */,
+				C3728F6F2BB2C7E900915D36 /* Japx */,
+				C3728F712BB2C7E900915D36 /* JapxAlamofire */,
+				C3728F732BB2C7E900915D36 /* JapxMoya */,
+				C3728F752BB2C7E900915D36 /* JapxRxAlamofire */,
+				C3728F772BB2C7E900915D36 /* JapxRxMoya */,
+			);
 			productName = ButterflyMXSDK;
 			productReference = B96B3BAF216EBDE90037F586 /* BMXCore.framework */;
 			productType = "com.apple.product-type.framework";
@@ -226,6 +227,11 @@
 				en,
 			);
 			mainGroup = B96B3BA5216EBDE90037F586;
+			packageReferences = (
+				C3728F662BB2C7C700915D36 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C3728F6B2BB2C7DB00915D36 /* XCRemoteSwiftPackageReference "OAuthSwift" */,
+				C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */,
+			);
 			productRefGroup = B96B3BB0216EBDE90037F586 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -244,31 +250,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E6D84F88905DACDB789044B8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BMXCore-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B96B3BAB216EBDE90037F586 /* Sources */ = {
@@ -425,7 +406,6 @@
 		};
 		B96B3BB8216EBDEA0037F586 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 172DFE8A150125D0C19E6596 /* Pods-BMXCore.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -476,7 +456,6 @@
 		};
 		B96B3BB9216EBDEA0037F586 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8C479EF5127D326E1F2877F /* Pods-BMXCore.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -550,6 +529,76 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3728F662BB2C7C700915D36 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+		C3728F6B2BB2C7DB00915D36 /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/infinum/Japx.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3728F672BB2C7C700915D36 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3728F662BB2C7C700915D36 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C3728F692BB2C7C700915D36 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3728F662BB2C7C700915D36 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		C3728F6C2BB2C7DB00915D36 /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3728F6B2BB2C7DB00915D36 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
+		};
+		C3728F6F2BB2C7E900915D36 /* Japx */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
+			productName = Japx;
+		};
+		C3728F712BB2C7E900915D36 /* JapxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
+			productName = JapxAlamofire;
+		};
+		C3728F732BB2C7E900915D36 /* JapxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
+			productName = JapxMoya;
+		};
+		C3728F752BB2C7E900915D36 /* JapxRxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
+			productName = JapxRxAlamofire;
+		};
+		C3728F772BB2C7E900915D36 /* JapxRxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
+			productName = JapxRxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B96B3BA6216EBDE90037F586 /* Project object */;
 }

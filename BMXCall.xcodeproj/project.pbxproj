@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		421F59D253706D74AD7B1BAB /* Pods_BMXCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EF58C0AF02727B96E111CC6 /* Pods_BMXCall.framework */; };
 		9C34B31E26EF8B7600BE181A /* TwilioIncomingCallProcessor+RemoteParticipantDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34B31D26EF8B7600BE181A /* TwilioIncomingCallProcessor+RemoteParticipantDelegate.swift */; };
 		9C34B32026EF9ADA00BE181A /* CallStatesAndEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34B31F26EF9ADA00BE181A /* CallStatesAndEvents.swift */; };
 		9C34B32226EFFAF800BE181A /* CallStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34B32126EFFAF800BE181A /* CallStatus.swift */; };
@@ -22,12 +21,26 @@
 		C322092422535EB100C2A1C0 /* SimpleStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322092322535EB100C2A1C0 /* SimpleStateMachine.swift */; };
 		C35FBD48224E41D700D58A4E /* CallNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FBD3F224E1AA300D58A4E /* CallNotifications.swift */; };
 		C35FBD4C224E41D700D58A4E /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FBD35224BB75C00D58A4E /* CallModel.swift */; };
-		C3D092192534903400C6E69C /* BMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C322092122535A5D00C2A1C0 /* BMXCore.framework */; };
+		C3728F822BB2CA9000915D36 /* TwilioVideo in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F812BB2CA9000915D36 /* TwilioVideo */; };
+		C3728F8B2BB2CB4000915D36 /* BMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3728F8A2BB2CB4000915D36 /* BMXCore.framework */; };
+		C3728F8C2BB2CB4000915D36 /* BMXCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3728F8A2BB2CB4000915D36 /* BMXCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C3728F8D2BB2CB4000915D36 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C3728F8C2BB2CB4000915D36 /* BMXCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2EF58C0AF02727B96E111CC6 /* Pods_BMXCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMXCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		69087AF4C11E8D53FF5CF356 /* Pods-BMXCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMXCall.release.xcconfig"; path = "Target Support Files/Pods-BMXCall/Pods-BMXCall.release.xcconfig"; sourceTree = "<group>"; };
 		9C34B31D26EF8B7600BE181A /* TwilioIncomingCallProcessor+RemoteParticipantDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TwilioIncomingCallProcessor+RemoteParticipantDelegate.swift"; sourceTree = "<group>"; };
 		9C34B31F26EF9ADA00BE181A /* CallStatesAndEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallStatesAndEvents.swift; sourceTree = "<group>"; };
 		9C34B32126EFFAF800BE181A /* CallStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallStatus.swift; sourceTree = "<group>"; };
@@ -38,15 +51,14 @@
 		9CDD7E8926EBFFB20063C1A7 /* IncomingViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingViewProtocols.swift; sourceTree = "<group>"; };
 		9CDD7E9026EF8B090063C1A7 /* TwilioIncomingCallProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwilioIncomingCallProcessor.swift; sourceTree = "<group>"; };
 		9CE64C9B270563AB0038EA1C /* ProviderTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderTokens.swift; sourceTree = "<group>"; };
-		C322092122535A5D00C2A1C0 /* BMXCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BMXCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C322092322535EB100C2A1C0 /* SimpleStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleStateMachine.swift; sourceTree = "<group>"; };
 		C35FB92E224BAAF600D58A4E /* BMXCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMXCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35FB931224BAAF600D58A4E /* BMXCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMXCall.h; sourceTree = "<group>"; };
 		C35FB932224BAAF600D58A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C35FBD35224BB75C00D58A4E /* CallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
 		C35FBD3F224E1AA300D58A4E /* CallNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallNotifications.swift; sourceTree = "<group>"; };
+		C3728F8A2BB2CB4000915D36 /* BMXCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BMXCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37BCF902BB2BA8500190B52 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		D708AB7FC33B8B06077A343A /* Pods-BMXCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMXCall.debug.xcconfig"; path = "Target Support Files/Pods-BMXCall/Pods-BMXCall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,23 +66,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3D092192534903400C6E69C /* BMXCore.framework in Frameworks */,
-				421F59D253706D74AD7B1BAB /* Pods_BMXCall.framework in Frameworks */,
+				C3728F822BB2CA9000915D36 /* TwilioVideo in Frameworks */,
+				C3728F8B2BB2CB4000915D36 /* BMXCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B401AE9268FA1CD70642F46 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D708AB7FC33B8B06077A343A /* Pods-BMXCall.debug.xcconfig */,
-				69087AF4C11E8D53FF5CF356 /* Pods-BMXCall.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		9C34B32726F22A3600BE181A /* WebRTC */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +117,7 @@
 		AF8D920325D61DDDA821DEA1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C322092122535A5D00C2A1C0 /* BMXCore.framework */,
-				2EF58C0AF02727B96E111CC6 /* Pods_BMXCall.framework */,
+				C3728F8A2BB2CB4000915D36 /* BMXCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,7 +127,6 @@
 			children = (
 				C35FB930224BAAF600D58A4E /* BMXCall */,
 				C35FB92F224BAAF600D58A4E /* Products */,
-				5B401AE9268FA1CD70642F46 /* Pods */,
 				AF8D920325D61DDDA821DEA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -171,17 +172,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C35FB936224BAAF600D58A4E /* Build configuration list for PBXNativeTarget "BMXCall" */;
 			buildPhases = (
-				C2A3E1797D26E7478C3A53AA /* [CP] Check Pods Manifest.lock */,
 				C35FB929224BAAF600D58A4E /* Headers */,
 				C35FB92A224BAAF600D58A4E /* Sources */,
 				C35FB92B224BAAF600D58A4E /* Frameworks */,
 				C35FB92C224BAAF600D58A4E /* Resources */,
+				C3728F8D2BB2CB4000915D36 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = BMXCall;
+			packageProductDependencies = (
+				C3728F812BB2CA9000915D36 /* TwilioVideo */,
+			);
 			productName = ButterflyMXCallSDK;
 			productReference = C35FB92E224BAAF600D58A4E /* BMXCall.framework */;
 			productType = "com.apple.product-type.framework";
@@ -209,6 +213,9 @@
 				en,
 			);
 			mainGroup = C35FB924224BAAF600D58A4E;
+			packageReferences = (
+				C3728F802BB2CA9000915D36 /* XCRemoteSwiftPackageReference "twilio-video-ios" */,
+			);
 			productRefGroup = C35FB92F224BAAF600D58A4E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -227,31 +234,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		C2A3E1797D26E7478C3A53AA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BMXCall-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C35FB92A224BAAF600D58A4E /* Sources */ = {
@@ -401,7 +383,6 @@
 		};
 		C35FB937224BAAF600D58A4E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D708AB7FC33B8B06077A343A /* Pods-BMXCall.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -453,7 +434,6 @@
 		};
 		C35FB938224BAAF600D58A4E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69087AF4C11E8D53FF5CF356 /* Pods-BMXCall.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
@@ -525,6 +505,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3728F802BB2CA9000915D36 /* XCRemoteSwiftPackageReference "twilio-video-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twilio/twilio-video-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3728F812BB2CA9000915D36 /* TwilioVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3728F802BB2CA9000915D36 /* XCRemoteSwiftPackageReference "twilio-video-ios" */;
+			productName = TwilioVideo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C35FB925224BAAF600D58A4E /* Project object */;
 }

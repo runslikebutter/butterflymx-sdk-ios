@@ -5,9 +5,6 @@
       location = "group:Submodules/ios-demo-app/ButterflyMX Demo.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:BMXCall.xcodeproj">
    </FileRef>
    <FileRef
