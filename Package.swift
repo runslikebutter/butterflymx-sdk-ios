@@ -31,12 +31,14 @@ var package = Package(
                 .product(name: "Japx", package: "Japx"),
                 .product(name: "JapxAlamofire", package: "Japx"),
             ],
-            path: "BMXCore"
+            path: "BMXCore",
+            resources: [.process("PrivacyInfo.xcprivacy")]
         ),
         .target(
             name: "BMXCall",
             dependencies: ["BMXCore", "TwilioVideo"],
-            path: "BMXCall"
+            path: "BMXCall",
+            resources: [.process("PrivacyInfo.xcprivacy")]
         )
     ]
 )

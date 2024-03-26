@@ -52,6 +52,7 @@
 		C32CEAD52254D04D00D7BB73 /* UnitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitModel.swift; sourceTree = "<group>"; };
 		C32CEADC2256012800D7BB73 /* BuildingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingModel.swift; sourceTree = "<group>"; };
 		C35FBD3D224E1A5A00D58A4E /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C37BCF8F2BB2BA7A00190B52 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		C390814021F71EBC00A4E884 /* TokensModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensModel.swift; sourceTree = "<group>"; };
 		C3B776DB236AE0C50060AEAC /* TenantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantModel.swift; sourceTree = "<group>"; };
 		C3C2322221F2116300A84483 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 				B96B3BC2216EC20D0037F586 /* APIClient.swift */,
 				B918E281216F222F00A2A76D /* OAuth2Handler.swift */,
 				C30B0C0F23EC4A5E00A65D82 /* FutureKit.swift */,
+				C37BCF8F2BB2BA7A00190B52 /* PrivacyInfo.xcprivacy */,
 			);
 			path = BMXCore;
 			sourceTree = "<group>";

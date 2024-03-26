@@ -45,6 +45,7 @@
 		C35FB932224BAAF600D58A4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C35FBD35224BB75C00D58A4E /* CallModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallModel.swift; sourceTree = "<group>"; };
 		C35FBD3F224E1AA300D58A4E /* CallNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallNotifications.swift; sourceTree = "<group>"; };
+		C37BCF902BB2BA8500190B52 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		D708AB7FC33B8B06077A343A /* Pods-BMXCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMXCall.debug.xcconfig"; path = "Target Support Files/Pods-BMXCall/Pods-BMXCall.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +148,7 @@
 				9C5A02EB26E724E300558366 /* BMXCallKit.swift */,
 				C35FB931224BAAF600D58A4E /* BMXCall.h */,
 				C35FB932224BAAF600D58A4E /* Info.plist */,
+				C37BCF902BB2BA8500190B52 /* PrivacyInfo.xcprivacy */,
 			);
 			path = BMXCall;
 			sourceTree = "<group>";
