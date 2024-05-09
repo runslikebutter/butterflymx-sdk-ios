@@ -8,8 +8,13 @@
 
 import Foundation
 import Alamofire
+#if COCOAPODS
+import Japx
+#else
 import Japx
 import JapxAlamofire
+#endif
+
 
 public class APIClient {
     static let sessionManager = Session()

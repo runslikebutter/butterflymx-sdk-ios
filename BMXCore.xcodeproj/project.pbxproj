@@ -422,10 +422,7 @@
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "i386 arm64";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/BMXCore/Info.plist";
@@ -474,10 +471,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/BMXCore/Info.plist";
@@ -493,7 +487,7 @@
 				MARKETING_VERSION = 2.1.1;
 				MODULEMAP_FILE = "";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.butterflymx.bmxcore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
