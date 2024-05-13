@@ -66,37 +66,15 @@ class OAuth2Handler: RequestInterceptor {
         guard !isRefreshing else { return }
         isRefreshing = true
         
-        let urlString = BMXCoreKit.shared.environment.backendEnvironment.accountURL + "/oauth/token"
-        guard let refreshToken = BMXCoreKit.shared.authProvider.refreshToken, let clientID = BMXCoreKit.shared.authProvider.clientID,
-        let secret = BMXCoreKit.shared.authProvider.secret else {
-            completion(false)
-            return
-        }
-
-        let parameters: [String: Any] = [
-            "refresh_token": refreshToken,
-            "client_id": clientID,
-            "grant_type": "refresh_token",
-            "client_secret": secret
-        ]
-
-        BMXCoreKit.shared.log(message: "Requesting new Access Token")
-        AuthSessionManager.shared.sessionManager.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .responseDecodable(of: TokensModel.self) { [weak self] response in
-                guard let strongSelf = self else { return }
-                switch response.result {
-                case .success(let tokens):
-                    BMXCoreKit.shared.log(format: "Access Token Response Value: %{private}@", message: tokens.access_token, type: .info)
-                    BMXCoreKit.shared.log(format: "Refrest Token Response Value: %{private}@", message: tokens.refresh_token, type: .info)
-                    BMXCoreKit.shared.authProvider.setUserTokens(accessToken: tokens.access_token, refreshToken: tokens.refresh_token)
-                    BMXCoreKit.shared.log(message: "Tokens are updated in the keychain")
-                    completion(true)
-                case .failure(let error):
-                    BMXCoreKit.shared.log(message: "Access Token Response Error: \(error)")
-                    completion(false)
-                }
-
-                strongSelf.isRefreshing = false
+        APIClient.refreshTokens { [weak self] result in
+            switch result {
+            case .success:
+                completion(true)
+            case .failure:
+                completion(false)
+            }
+            
+            self?.isRefreshing = false
         }
     }
     

@@ -175,6 +175,12 @@ public class BMXCoreKit {
             completion(result)
         }
     }
+    
+    public func refreshAccessToken(completion: @escaping (Result<BMXAuthProvider, Error>) -> Void) {
+        APIClient.refreshTokens { result in
+            completion(result)
+        }
+    }
 
     // MARK: - Private
     
