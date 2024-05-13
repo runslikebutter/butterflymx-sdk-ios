@@ -18,5 +18,5 @@ Pod::Spec.new do |spec|
   spec.dependency 'BMXCore', '~> 2.3.5'
   spec.dependency 'TwilioVideo', '~> 5.8'
 
-  spec.resource_bundles = {'BMXCall' => ['BMXCore/PrivacyInfo.xcprivacy']}
+  spec.resource_bundles = {'BMXCall' => ['BMXCall/PrivacyInfo.xcprivacy']}
 end
