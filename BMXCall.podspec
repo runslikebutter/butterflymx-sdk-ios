@@ -1,0 +1,22 @@
+Pod::Spec.new do |spec|
+  spec.name = 'BMXCall'
+  spec.version = '2.3.5'
+  spec.swift_versions = ['5']
+
+  spec.cocoapods_version = '>= 1.13.0'
+  spec.ios.deployment_target = '14.0'
+
+  spec.summary      = 'A Swift framework to implement ButterflyMX SDK'
+  spec.homepage     = "https://github.com/runslikebutter/butterflymx-sdk-ios"
+
+  spec.license      = "Apache-2.0 license"
+  spec.author       = { "ButterflyMX" => "admin@butterflymx.com" }
+  spec.source       = { :git => "https://github.com/runslikebutter/butterflymx-sdk-ios.git", :tag => 'v' + spec.version.to_s }
+
+  spec.source_files  = "BMXCall/**/*.swift"
+
+  spec.dependency 'BMXCore', '~> 2.3.5'
+  spec.dependency 'TwilioVideo', '~> 5.8'
+
+  spec.resource_bundles = {'BMXCall' => ['BMXCore/PrivacyInfo.xcprivacy']}
+end
