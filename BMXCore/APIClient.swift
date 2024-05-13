@@ -252,6 +252,38 @@ public class APIClient {
             }
     }
     
+    class func refreshTokens(completion: @escaping (Result<BMXAuthProvider, Error>) -> Void) {
+        let urlString = BMXCoreKit.shared.environment.backendEnvironment.accountURL + "/oauth/token"
+        guard let refreshToken = BMXCoreKit.shared.authProvider.refreshToken, let clientID = BMXCoreKit.shared.authProvider.clientID,
+        let secret = BMXCoreKit.shared.authProvider.secret else {
+            completion(.failure(ServiceError.unableToCreateRequest(message: "refreshToken, clientID or secret is missing")))
+            return
+        }
+
+        let parameters: [String: Any] = [
+            "refresh_token": refreshToken,
+            "client_id": clientID,
+            "grant_type": "refresh_token",
+            "client_secret": secret
+        ]
+
+        BMXCoreKit.shared.log(message: "Requesting new Access Token")
+        AuthSessionManager.shared.sessionManager.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseDecodable(of: TokensModel.self) { response in
+                switch response.result {
+                case .success(let tokens):
+                    BMXCoreKit.shared.log(format: "Access Token Response Value: %{private}@", message: tokens.access_token, type: .info)
+                    BMXCoreKit.shared.log(format: "Refrest Token Response Value: %{private}@", message: tokens.refresh_token, type: .info)
+                    BMXCoreKit.shared.authProvider.setUserTokens(accessToken: tokens.access_token, refreshToken: tokens.refresh_token)
+                    BMXCoreKit.shared.log(message: "Tokens are updated in the keychain")
+                    completion(.success(BMXCoreKit.shared.authProvider))
+                case .failure(let error):
+                    BMXCoreKit.shared.log(message: "Access Token Response Error: \(error)")
+                    completion(.failure(error))
+                }
+        }
+    }
+    
     public class func sendRequest(path: String, params: Parameters, method: HTTPMethod, completion: @escaping ((Result<Data, AFError>) -> Void)) {
         let urlString = BMXCoreKit.shared.environment.backendEnvironment.baseURL + "/v3/" + path
 

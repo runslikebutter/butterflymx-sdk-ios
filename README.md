@@ -25,3 +25,9 @@ dependencies: [
 3. Choose the desired version of the ButterflyMX package, then click Add Package.
 4. In the list of available packages, select both the BmxCore and BmxCall packages.
 5. Finally, click Add Package to add the selected packages to your project.
+
+### Cocoapods
+To integrate BMX SDK into your Xcode project using CocoaPods, specify it in your Podfile:
+```
+pod 'BMXCall', '2.3.5'
+```
