@@ -70,17 +70,24 @@ public class BMXCoreKit {
         OAuthSwift.handle(url: url)
     }
 
+    /// Presents an authorization form to authenticate a user using either pre-existing tokens.
     /// Use this method if you have you onw OAuth flow implemented
     /// - Parameters:
-    ///   - authProvider: auth provider with secret and client ID and user tokens
+    ///   - authProvider: Auth provider with secret and client ID and user tokens
+    ///   - completion: A completion handler that returns a Result containing either a UserModel on success or a ServiceError on failure.
     public func authorize(withAuthProvider authProvider: BMXAuthProvider, completion: @escaping (Result<UserModel, ServiceError>) -> Void) {
         authorize(withAuthProvider: authProvider, callbackURL: nil, viewController: nil, completion: completion)
     }
 
+    /// Presents an authorization form to authenticate a user using either pre-existing tokens or the OAuth2 protocol.
     /// Use this method if you do not have you onw OAuth flow implemented
     /// - Parameters:
-    ///   - authProvider: auth provider with secret and client ID
-    public func authorize(withAuthProvider authProvider: BMXAuthProvider, callbackURL: URL?, viewController: UIViewController?, completion: @escaping (Result<UserModel, ServiceError>) -> Void) {
+    ///   - authProvider: Auth provider with secret and client ID
+    ///   - callbackURL: URL to handle OAuth2 callback. This is required for SDK's built in OAuth2 authentication
+    ///   - viewController: View controller to present the authorization form.  This is required for SDK's built in OAuth2 authentication
+    ///   - promptLogin: Boolean flag indicating whether the user should be prompted to log in. Default value is true.
+    ///   - completion: A completion handler that returns a Result containing either a UserModel on success or a ServiceError on failure.
+    public func authorize(withAuthProvider authProvider: BMXAuthProvider, callbackURL: URL?, viewController: UIViewController?, promptLogin: Bool = true, completion: @escaping (Result<UserModel, ServiceError>) -> Void) {
         let promise: Future<TokensModel>
         self.authProvider.setSession(secret: authProvider.secret, clientID: authProvider.clientID)
         BMXCoreKit.shared.log(message: "Client and Secret IDs are saved to keycain")
@@ -90,7 +97,7 @@ public class BMXCoreKit {
             promise = Promise<TokensModel>().resolve(with: TokensModel(access_token: accessToken, refresh_token: refreshToken))
         } else if let callbackURL = callbackURL, let viewController = viewController {
             BMXCoreKit.shared.log(message: "Authorize user using OAuth2")
-            promise = authorize(with: callbackURL, viewController: viewController)
+            promise = authorize(with: callbackURL, viewController: viewController, promptLogin: promptLogin)
         } else {
             completion(.failure(ServiceError.unableToCreateRequest(message: "accessToken or refreshToken or callbackURL is missing")))
             return
@@ -186,7 +193,7 @@ public class BMXCoreKit {
     
     private var oauth: OAuth2Swift?
 
-    private func authorize(with callbackURL: URL, viewController: UIViewController) -> Future<TokensModel> {
+    private func authorize(with callbackURL: URL, viewController: UIViewController, promptLogin: Bool) -> Future<TokensModel> {
         let promise = Promise<TokensModel>()
         guard let consumerKey = authProvider.clientID, let consumerSecret = authProvider.secret else {
             promise.reject(with: ServiceError.unableToCreateRequest(message: "clientID or secret is missing"))
@@ -203,11 +210,12 @@ public class BMXCoreKit {
 
         oauth?.allowMissingStateCheck = true
         
+        let parameters: [String: String] = promptLogin ? ["prompt": "login"] : [:]
         let authorizeURLHandler = SafariURLHandler(viewController: viewController, oauthSwift: oauth!)
         authorizeURLHandler.delegate = authorizationWebViewDelegate
         oauth?.authorizeURLHandler = authorizeURLHandler
-
-        oauth?.authorize(withCallbackURL: callbackURL, scope: "", state:"") { result in
+        
+        oauth?.authorize(withCallbackURL: callbackURL, scope: "openid+profile", state:"", parameters: parameters) { result in
             switch result {
             case .success(let (credential, _, _)):
                 promise.resolve(with: TokensModel(access_token: credential.oauthToken, refresh_token: credential.oauthRefreshToken))
