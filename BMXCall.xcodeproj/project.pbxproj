@@ -18,10 +18,10 @@
 		9CDD7E9126EF8B090063C1A7 /* TwilioIncomingCallProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDD7E9026EF8B090063C1A7 /* TwilioIncomingCallProcessor.swift */; };
 		9CE64C9C270563AB0038EA1C /* ProviderTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE64C9B270563AB0038EA1C /* ProviderTokens.swift */; };
 		C301989E252B701200D0B891 /* BMXCall.h in Headers */ = {isa = PBXBuildFile; fileRef = C35FB931224BAAF600D58A4E /* BMXCall.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C31F50122C51091900A1705F /* TwilioVideo in Frameworks */ = {isa = PBXBuildFile; productRef = C31F50112C51091900A1705F /* TwilioVideo */; };
 		C322092422535EB100C2A1C0 /* SimpleStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C322092322535EB100C2A1C0 /* SimpleStateMachine.swift */; };
 		C35FBD48224E41D700D58A4E /* CallNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FBD3F224E1AA300D58A4E /* CallNotifications.swift */; };
 		C35FBD4C224E41D700D58A4E /* CallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FBD35224BB75C00D58A4E /* CallModel.swift */; };
-		C3728F822BB2CA9000915D36 /* TwilioVideo in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F812BB2CA9000915D36 /* TwilioVideo */; };
 		C3728F8B2BB2CB4000915D36 /* BMXCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3728F8A2BB2CB4000915D36 /* BMXCore.framework */; };
 		C3728F8C2BB2CB4000915D36 /* BMXCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C3728F8A2BB2CB4000915D36 /* BMXCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -66,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3728F822BB2CA9000915D36 /* TwilioVideo in Frameworks */,
+				C31F50122C51091900A1705F /* TwilioVideo in Frameworks */,
 				C3728F8B2BB2CB4000915D36 /* BMXCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,7 +184,7 @@
 			);
 			name = BMXCall;
 			packageProductDependencies = (
-				C3728F812BB2CA9000915D36 /* TwilioVideo */,
+				C31F50112C51091900A1705F /* TwilioVideo */,
 			);
 			productName = ButterflyMXCallSDK;
 			productReference = C35FB92E224BAAF600D58A4E /* BMXCall.framework */;
@@ -214,7 +214,7 @@
 			);
 			mainGroup = C35FB924224BAAF600D58A4E;
 			packageReferences = (
-				C3728F802BB2CA9000915D36 /* XCRemoteSwiftPackageReference "twilio-video-ios" */,
+				C31F50102C51091900A1705F /* XCRemoteSwiftPackageReference "twilio-video-ios" */,
 			);
 			productRefGroup = C35FB92F224BAAF600D58A4E /* Products */;
 			projectDirPath = "";
@@ -399,11 +399,7 @@
 				ENABLE_BITCODE = YES;
 				"EXCLUDED_ARCHS[sdk=*]" = "i386 x86_64";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "i386 arm64";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"PJ_AUTOCONF=1",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/BMXCall/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -416,10 +412,6 @@
 				MACH_O_TYPE = mh_dylib;
 				MARKETING_VERSION = 2.1.1;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-l\"c++\"",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.butterflymx.bmxcall;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -451,11 +443,6 @@
 				ENABLE_BITCODE = YES;
 				"EXCLUDED_ARCHS[sdk=*]" = "i386 x86_64";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "i386 arm64";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"PJ_AUTOCONF=1",
-				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/BMXCall/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -468,10 +455,6 @@
 				MACH_O_TYPE = mh_dylib;
 				MARKETING_VERSION = 2.1.1;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-l\"c++\"",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.butterflymx.bmxcall;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -507,20 +490,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C3728F802BB2CA9000915D36 /* XCRemoteSwiftPackageReference "twilio-video-ios" */ = {
+		C31F50102C51091900A1705F /* XCRemoteSwiftPackageReference "twilio-video-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twilio/twilio-video-ios.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.8.0;
+				minimumVersion = 5.8.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C3728F812BB2CA9000915D36 /* TwilioVideo */ = {
+		C31F50112C51091900A1705F /* TwilioVideo */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C3728F802BB2CA9000915D36 /* XCRemoteSwiftPackageReference "twilio-video-ios" */;
+			package = C31F50102C51091900A1705F /* XCRemoteSwiftPackageReference "twilio-video-ios" */;
 			productName = TwilioVideo;
 		};
 /* End XCSwiftPackageProductDependency section */
