@@ -88,6 +88,7 @@ public class BMXCallKit {
                 
                 guard call.attributes?.status == Call.Status.initializing.rawValue else {
                     self.processor?.processCall(call: call, callType: callType)
+                    completion(.success(call))
                     return
                 }
                 

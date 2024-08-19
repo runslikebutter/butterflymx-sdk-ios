@@ -15,6 +15,7 @@
 		B96B3BC7216ED5930037F586 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96B3BC6216ED5930037F586 /* UserModel.swift */; };
 		C30B0C1023EC4A5E00A65D82 /* FutureKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B0C0F23EC4A5E00A65D82 /* FutureKit.swift */; };
 		C3112CA12306BC75003B18FA /* RegionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3112CA02306BC75003B18FA /* RegionsModel.swift */; };
+		C31F4FFF2C4FF8C600A1705F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C31F4FFE2C4FF8C600A1705F /* Alamofire */; };
 		C328BBE821EFA2340015C939 /* BMXUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328BBE021EFA2330015C939 /* BMXUser.swift */; };
 		C328BBEA21EFA2340015C939 /* BMXAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328BBE321EFA2330015C939 /* BMXAuthProvider.swift */; };
 		C328BBEB21EFA2340015C939 /* BMXEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C328BBE521EFA2330015C939 /* BMXEnvironment.swift */; };
@@ -22,8 +23,6 @@
 		C32CEAD62254D04D00D7BB73 /* PanelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CEAD42254D04900D7BB73 /* PanelModel.swift */; };
 		C32CEAD72254D04D00D7BB73 /* UnitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CEAD52254D04D00D7BB73 /* UnitModel.swift */; };
 		C32CEADD2256012800D7BB73 /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CEADC2256012800D7BB73 /* BuildingModel.swift */; };
-		C3728F682BB2C7C700915D36 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F672BB2C7C700915D36 /* Alamofire */; };
-		C3728F6A2BB2C7C700915D36 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F692BB2C7C700915D36 /* AlamofireDynamic */; };
 		C3728F6D2BB2C7DB00915D36 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F6C2BB2C7DB00915D36 /* OAuthSwift */; };
 		C3728F702BB2C7E900915D36 /* Japx in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F6F2BB2C7E900915D36 /* Japx */; };
 		C3728F722BB2C7E900915D36 /* JapxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F712BB2C7E900915D36 /* JapxAlamofire */; };
@@ -70,9 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3728F682BB2C7C700915D36 /* Alamofire in Frameworks */,
 				C3728F742BB2C7E900915D36 /* JapxMoya in Frameworks */,
-				C3728F6A2BB2C7C700915D36 /* AlamofireDynamic in Frameworks */,
+				C31F4FFF2C4FF8C600A1705F /* Alamofire in Frameworks */,
 				C3728F6D2BB2C7DB00915D36 /* OAuthSwift in Frameworks */,
 				C3728F702BB2C7E900915D36 /* Japx in Frameworks */,
 				C3728F782BB2C7E900915D36 /* JapxRxMoya in Frameworks */,
@@ -191,14 +189,13 @@
 			);
 			name = BMXCore;
 			packageProductDependencies = (
-				C3728F672BB2C7C700915D36 /* Alamofire */,
-				C3728F692BB2C7C700915D36 /* AlamofireDynamic */,
 				C3728F6C2BB2C7DB00915D36 /* OAuthSwift */,
 				C3728F6F2BB2C7E900915D36 /* Japx */,
 				C3728F712BB2C7E900915D36 /* JapxAlamofire */,
 				C3728F732BB2C7E900915D36 /* JapxMoya */,
 				C3728F752BB2C7E900915D36 /* JapxRxAlamofire */,
 				C3728F772BB2C7E900915D36 /* JapxRxMoya */,
+				C31F4FFE2C4FF8C600A1705F /* Alamofire */,
 			);
 			productName = ButterflyMXSDK;
 			productReference = B96B3BAF216EBDE90037F586 /* BMXCore.framework */;
@@ -228,9 +225,9 @@
 			);
 			mainGroup = B96B3BA5216EBDE90037F586;
 			packageReferences = (
-				C3728F662BB2C7C700915D36 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C3728F6B2BB2C7DB00915D36 /* XCRemoteSwiftPackageReference "OAuthSwift" */,
 				C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */,
+				C31F4FFD2C4FF8C600A1705F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = B96B3BB0216EBDE90037F586 /* Products */;
 			projectDirPath = "";
@@ -487,7 +484,6 @@
 				MARKETING_VERSION = 2.1.1;
 				MODULEMAP_FILE = "";
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.butterflymx.bmxcore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
@@ -525,12 +521,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C3728F662BB2C7C700915D36 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		C31F4FFD2C4FF8C600A1705F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.6.1;
+				minimumVersion = 5.9.1;
 			};
 		};
 		C3728F6B2BB2C7DB00915D36 /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
@@ -552,15 +548,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C3728F672BB2C7C700915D36 /* Alamofire */ = {
+		C31F4FFE2C4FF8C600A1705F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C3728F662BB2C7C700915D36 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = C31F4FFD2C4FF8C600A1705F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		C3728F692BB2C7C700915D36 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3728F662BB2C7C700915D36 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 		C3728F6C2BB2C7DB00915D36 /* OAuthSwift */ = {
 			isa = XCSwiftPackageProductDependency;

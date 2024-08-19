@@ -16,35 +16,35 @@ public enum BMXBackendEnvironment {
     var baseURL: String {
         let region = BMXCoreKit.shared.environment.getRegion()
         switch (self, region) {
-        case (.development, .na): return "https://apitest.butterflymx.com"
-        case (.development, .eu): return "https://eu.apitest.butterflymx.com"
+        case (.development, .na): return "https://api.na.staging.butterflymx.com"
+        case (.development, .eu): return "https://api.eu.staging.butterflymx.com"
         case (.production, .na):  return "https://api.butterflymx.com"
         case (.production, .eu):  return "https://eu.api.butterflymx.com"
-        case (.sandbox, _): return "https://apisandbox.butterflymx.com"
+        case (.sandbox, _): return "https://api.na.sandbox.butterflymx.com"
         }
     }
 
     var accountURL: String {
         switch self {
-        case .development: return "https://accountstest.butterflymx.com"
-        case .production:  return "https://accounts.butterflymx.com"
-        case .sandbox: return "https://accountssandbox.butterflymx.com"
+        case .development: return "https://accounts.na.staging.butterflymx.com"
+        case .sandbox: return "https://accounts.na.sandbox.butterflymx.com"
+        case .production: return "https://accounts.butterflymx.com"
         }
     }
 
     var oauthAuthorize: String {
         switch self {
-        case .development: return "https://accountstest.butterflymx.com/oauth/authorize"
-        case .production:  return "https://accounts.butterflymx.com/oauth/authorize"
-        case .sandbox: return "https://accountssandbox.butterflymx.com/oauth/authorize"
+        case .development: return "https://accounts.na.staging.butterflymx.com/oauth/authorize"
+        case .sandbox: return "https://accounts.na.sandbox.butterflymx.com/oauth/authorize"
+        case .production: return "https://accounts.butterflymx.com/oauth/authorize"
         }
     }
 
     var oauthToken: String {
         switch self {
-        case .development: return "https://accountstest.butterflymx.com/oauth/token"
-        case .production:  return "https://accounts.butterflymx.com/oauth/token"
-        case .sandbox: return "https://accountssandbox.butterflymx.com/oauth/token"
+        case .development: return "https://accounts.na.staging.butterflymx.com/oauth/token"
+        case .sandbox: return "https://accounts.na.sandbox.butterflymx.com/oauth/token"
+        case .production: return "https://accounts.butterflymx.com/oauth/token"
         }
     }
 
