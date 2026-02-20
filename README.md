@@ -217,12 +217,11 @@ Open a door (e.g., from a panel/device in a tenant):
 let tenant = BMXUser.shared.getTenants().first!
 let device = BMXUser.shared.getDevices(from: tenant).first!
 
-BMXDoor.shared.openDoor(device: device, tenant: tenant, method: .frontDoorView) { result in
-    switch result {
-    case .success:
+BMXDoor.shared.openDoor(device: device, tenant: tenant, method: .frontDoorView) { success in
+    if success {
         print("Door opened")
-    case .failure(let error):
-        print("Door release failed: \(error)")
+    } else {
+        print("Door release failed")
     }
 }
 ```
@@ -254,7 +253,7 @@ BMXCallKit.shared.incomingCallPresenter = myCallViewController
 When a push notification arrives with a ButterflyMX call, extract the `guid` and call type, then:
 
 ```swift
-BMXCallKit.shared.processCall(guid: callGuid, callType: "incoming") { result in
+BMXCallKit.shared.processCall(guid: callGuid, callType: .callkit) { result in
     switch result {
     case .success:
         // Call is ready; present your call UI
@@ -283,8 +282,8 @@ BMXCallKit.shared.showOutgoingVideo()  // Enable front camera
 BMXCallKit.shared.hideOutgoingVideo()  // Disable front camera
 
 // Open door during an active call
-BMXCallKit.shared.openDoor { result in
-    // handle result
+BMXCallKit.shared.openDoor { success in
+    // handle success (Bool)
 }
 ```
 
@@ -360,7 +359,7 @@ extension MyCallViewController: IncomingCallUIDelegate {
     func toggleFrontCamera() { /* toggle showOutgoingVideo */ }
     func toggleSpeaker() { /* toggle turnOnSpeaker/turnOffSpeaker */ }
     func toggleMicrophone() { /* toggle muteMic/unmuteMic */ }
-    func pressOpenDoor(completion: @escaping (Result<Void, Error>) -> Void) {
+    func pressOpenDoor(completion: ((Bool) -> Void)?) {
         BMXCallKit.shared.openDoor(completion: completion)
     }
     func proximityChange(value: Bool) { /* handle proximity sensor */ }
