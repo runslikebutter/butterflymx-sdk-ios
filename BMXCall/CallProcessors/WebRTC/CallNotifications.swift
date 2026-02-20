@@ -1,6 +1,6 @@
 //
-//  XMPPMessage.swift
-//  ButterflyMXSDK
+//  CallNotifications.swift
+//  BMXCall
 //
 //  Created by Zhe Cui on 10/10/18.
 //  Copyright © 2018 ButterflyMX. All rights reserved.

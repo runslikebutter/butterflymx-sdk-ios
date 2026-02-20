@@ -1,12 +1,13 @@
 {
+  "originHash" : "fbe446a186d72111751f68dab2e04e9bfc67fc63e1453af44efcd795ad3016c9",
   "pins" : [
     {
       "identity" : "alamofire",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Alamofire/Alamofire.git",
       "state" : {
-        "revision" : "723fa5a6c65812aec4a0d7cc432ee198883b6e00",
-        "version" : "5.9.0"
+        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
+        "version" : "5.9.1"
       }
     },
     {
@@ -16,6 +17,15 @@
       "state" : {
         "revision" : "fa66fa183dce7196d431244d0215748cd14c5758",
         "version" : "8.2.0"
+      }
+    },
+    {
+      "identity" : "butterflymx-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/runslikebutter/butterflymx-sdk-ios/",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0ad5a25c7abce521e1e70fd0748c40b158a61099"
       }
     },
     {
@@ -86,8 +96,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ReactiveX/RxSwift.git",
       "state" : {
-        "revision" : "9dcaa4b333db437b0fbfaf453fad29069044a8b4",
-        "version" : "6.6.0"
+        "revision" : "5734ad2b6d7d4c0656df3d09ca4ce54fa3c09913",
+        "version" : "6.10.1"
+      }
+    },
+    {
+      "identity" : "svprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SVProgressHUD/SVProgressHUD.git",
+      "state" : {
+        "revision" : "c33f7c775ba7feea6047a1fc3257f2e5863b44f7",
+        "version" : "2.3.1"
       }
     },
     {
@@ -104,10 +123,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/twilio/twilio-video-ios.git",
       "state" : {
-        "revision" : "d2d87e3780cd4b1571f26fe4566d950a997ab154",
-        "version" : "5.8.0"
+        "revision" : "b2c7eb4b43e48d96500d6ae14fa67ac069431acd",
+        "version" : "5.11.1"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

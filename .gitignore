@@ -1,5 +1,25 @@
+# macOS
 .DS_Store
+
+# Xcode
 *xcuserdata*
 *xccheckout*
-Pods
+*.xcscmblueprint
+IDEWorkspaceChecks.plist
+DerivedData/
+*.moved-aside
+*.hmap
+
+# Swift Package Manager
+.swiftpm/
+.build/
+# Root Package.resolved is not committed for libraries — consumers manage their own resolution.
+# The workspace Package.resolved (ButterflyMXSDK.xcworkspace/xcshareddata/swiftpm/Package.resolved)
+# should be committed for reproducible team development builds.
+/Package.resolved
+
+# CocoaPods (not supported)
+Pods/
+
+# Legacy
 BMXCall/Dependencies/pjsip
