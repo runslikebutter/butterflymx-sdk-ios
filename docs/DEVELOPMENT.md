@@ -61,7 +61,7 @@ Alternatively, open `Package.swift` directly if you only need to work on the SDK
 
 | Package | Used by | Purpose |
 |---|---|---|
-| Alamofire `~> 5.6` | BMXCore | HTTP networking |
+| Alamofire `5.6.1 ..< 5.10.0` | BMXCore | HTTP networking |
 | OAuthSwift `~> 2.2` | BMXCore | OAuth2 flow |
 | Japx `~> 4.0` | BMXCore | JSON:API decoding |
 | TwilioVideo `~> 5.8` | BMXCall | WebRTC video calls |

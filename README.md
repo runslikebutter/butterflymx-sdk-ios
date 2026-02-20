@@ -70,10 +70,10 @@ Call `configure` early in your app lifecycle (e.g., `AppDelegate.application(_:d
 ```swift
 import BMXCore
 
-BMXCoreKit.shared.configure(withEnvironment: BMXEnvironment(), logger: nil)
+BMXCoreKit.shared.configure(withEnvironment: BMXEnvironment(backendEnvironment: .production), logger: nil)
 ```
 
-To receive SDK log output, implement `BMXCoreDelegate` and pass it as `logger`:
+To receive SDK log output, implement `BMXCoreDelegate` and set it as the delegate separately:
 
 ```swift
 class MyLogger: BMXCoreDelegate {
@@ -85,7 +85,8 @@ class MyLogger: BMXCoreDelegate {
     }
 }
 
-BMXCoreKit.shared.configure(withEnvironment: BMXEnvironment(), logger: myLogger)
+BMXCoreKit.shared.configure(withEnvironment: BMXEnvironment(backendEnvironment: .production), logger: nil)
+BMXCoreKit.shared.delegate = myLogger
 ```
 
 ### 2. Handle OAuth Callback URL
@@ -297,11 +298,11 @@ extension MyCallViewController: CallStatusDelegate {
         // WebRTC connection established
     }
 
-    func callAccepted(from panelName: String, usingCallKit: Bool) {
-        // Resident accepted the call
+    func callAccepted(from call: Call, usingCallKit: Bool) {
+        // Resident accepted the call; use call.panelName to get the panel name
     }
 
-    func callCanceled(callId: String, reason: String, usingCallKit: Bool) {
+    func callCanceled(callId: String, reason: CallCancelReason, usingCallKit: Bool) {
         // Call was canceled before answer (reason: timeout, panel hung up, etc.)
         dismissCallUI()
     }
@@ -403,12 +404,17 @@ BMXCoreKit.shared.unregisterWebhook(withTenantId: tenantId, webhookId: webhookId
 
 ## Environments
 
-By default the SDK targets the production environment. To switch environments:
+By default the SDK targets the **development** environment. Always configure with `.production` in release builds:
 
 ```swift
-var env = BMXEnvironment()
-env.backendEnvironment = .development  // or .sandbox, .production
-BMXCoreKit.shared.configure(withEnvironment: env, logger: nil)
+BMXCoreKit.shared.configure(withEnvironment: BMXEnvironment(backendEnvironment: .production), logger: nil)
+```
+
+To target a different environment:
+
+```swift
+BMXCoreKit.shared.configure(withEnvironment: BMXEnvironment(backendEnvironment: .development), logger: nil)
+// or .sandbox, .production
 ```
 
 | Environment | Description |
