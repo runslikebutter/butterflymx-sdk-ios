@@ -208,8 +208,7 @@ public class BMXCoreKit {
             responseType: "code"
         )
 
-        oauth?.allowMissingStateCheck = true
-
+        let state = generateState(withLength: 20)
         let parameters: [String: String] = promptLogin ? ["prompt": "login"] : [:]
         let handler = SafariURLHandler(viewController: viewController, oauthSwift: oauth!)
         handler.delegate = authorizationWebViewDelegate
@@ -235,7 +234,7 @@ public class BMXCoreKit {
             oauth?.authorize(
                 withCallbackURL: callbackURL,
                 scope: "openid+profile",
-                state: "",
+                state: state,
                 codeChallenge: codeChallenge,
                 codeChallengeMethod: "S256",
                 codeVerifier: codeVerifier,
@@ -243,7 +242,7 @@ public class BMXCoreKit {
                 completionHandler: completion
             )
         } else {
-            oauth?.authorize(withCallbackURL: callbackURL, scope: "openid+profile", state: "", parameters: parameters, completionHandler: completion)
+            oauth?.authorize(withCallbackURL: callbackURL, scope: "openid+profile", state: state, parameters: parameters, completionHandler: completion)
         }
 
         return promise
