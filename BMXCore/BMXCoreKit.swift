@@ -195,33 +195,55 @@ public class BMXCoreKit {
 
     private func authorize(with callbackURL: URL, viewController: UIViewController, promptLogin: Bool) -> Future<TokensModel> {
         let promise = Promise<TokensModel>()
-        guard let consumerKey = authProvider.clientID, let consumerSecret = authProvider.secret else {
-            promise.reject(with: ServiceError.unableToCreateRequest(message: "clientID or secret is missing"))
+        guard let consumerKey = authProvider.clientID else {
+            promise.reject(with: ServiceError.unableToCreateRequest(message: "clientID is missing"))
             return promise
         }
 
         oauth = OAuth2Swift(
             consumerKey: consumerKey,
-            consumerSecret: consumerSecret,
+            consumerSecret: authProvider.secret ?? "",
             authorizeUrl: environment.backendEnvironment.oauthAuthorize,
             accessTokenUrl: environment.backendEnvironment.oauthToken,
             responseType: "code"
         )
 
         oauth?.allowMissingStateCheck = true
-        
+
         let parameters: [String: String] = promptLogin ? ["prompt": "login"] : [:]
-        let authorizeURLHandler = SafariURLHandler(viewController: viewController, oauthSwift: oauth!)
-        authorizeURLHandler.delegate = authorizationWebViewDelegate
-        oauth?.authorizeURLHandler = authorizeURLHandler
-        
-        oauth?.authorize(withCallbackURL: callbackURL, scope: "openid+profile", state:"", parameters: parameters) { result in
+        let handler = SafariURLHandler(viewController: viewController, oauthSwift: oauth!)
+        handler.delegate = authorizationWebViewDelegate
+        oauth?.authorizeURLHandler = handler
+
+        let usePKCE = authProvider.secret == nil || authProvider.secret?.isEmpty == true
+
+        let completion: OAuthSwift.TokenCompletionHandler = { result in
             switch result {
             case .success(let (credential, _, _)):
                 promise.resolve(with: TokensModel(access_token: credential.oauthToken, refresh_token: credential.oauthRefreshToken))
             case .failure(let error):
                 promise.reject(with: error)
             }
+        }
+
+        if usePKCE {
+            guard let codeVerifier = generateCodeVerifier(),
+                  let codeChallenge = generateCodeChallenge(codeVerifier: codeVerifier) else {
+                promise.reject(with: ServiceError.unableToCreateRequest(message: "Failed to generate PKCE parameters"))
+                return promise
+            }
+            oauth?.authorize(
+                withCallbackURL: callbackURL,
+                scope: "openid+profile",
+                state: "",
+                codeChallenge: codeChallenge,
+                codeChallengeMethod: "S256",
+                codeVerifier: codeVerifier,
+                parameters: parameters,
+                completionHandler: completion
+            )
+        } else {
+            oauth?.authorize(withCallbackURL: callbackURL, scope: "openid+profile", state: "", parameters: parameters, completionHandler: completion)
         }
 
         return promise
