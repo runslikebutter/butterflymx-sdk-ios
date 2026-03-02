@@ -254,18 +254,20 @@ public class APIClient {
     
     class func refreshTokens(completion: @escaping (Result<BMXAuthProvider, Error>) -> Void) {
         let urlString = BMXCoreKit.shared.environment.backendEnvironment.accountURL + "/oauth/token"
-        guard let refreshToken = BMXCoreKit.shared.authProvider.refreshToken, let clientID = BMXCoreKit.shared.authProvider.clientID,
-        let secret = BMXCoreKit.shared.authProvider.secret else {
-            completion(.failure(ServiceError.unableToCreateRequest(message: "refreshToken, clientID or secret is missing")))
+        guard let refreshToken = BMXCoreKit.shared.authProvider.refreshToken,
+              let clientID = BMXCoreKit.shared.authProvider.clientID else {
+            completion(.failure(ServiceError.unableToCreateRequest(message: "refreshToken or clientID is missing")))
             return
         }
 
-        let parameters: [String: Any] = [
+        var parameters: [String: Any] = [
             "refresh_token": refreshToken,
             "client_id": clientID,
-            "grant_type": "refresh_token",
-            "client_secret": secret
+            "grant_type": "refresh_token"
         ]
+        if let secret = BMXCoreKit.shared.authProvider.secret, !secret.isEmpty {
+            parameters["client_secret"] = secret
+        }
 
         BMXCoreKit.shared.log(message: "Requesting new Access Token")
         AuthSessionManager.shared.sessionManager.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default)

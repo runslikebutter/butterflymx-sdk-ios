@@ -55,6 +55,17 @@ public final class BMXAuthProvider {
         setUserTokens(accessToken: accessToken, refreshToken: refreshToken)
     }
 
+    public init(clientID: String) {
+        self.storage = TempStorage()
+        setSession(secret: nil, clientID: clientID)
+    }
+
+    public init(clientID: String, accessToken: String, refreshToken: String) {
+        self.storage = TempStorage()
+        setSession(secret: nil, clientID: clientID)
+        setUserTokens(accessToken: accessToken, refreshToken: refreshToken)
+    }
+
     init(storage: KeyValueStorage) {
         self.storage = storage
     }
