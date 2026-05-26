@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "BMXCore"
-  spec.version      = "2.3.8"
+  spec.version      = "2.3.9"
   spec.swift_versions = ['5']
 
   spec.cocoapods_version = '>= 1.13.0'
