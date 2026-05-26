@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.summary      = 'A Swift framework to implement ButterflyMX SDK'
   spec.homepage     = "https://github.com/runslikebutter/butterflymx-sdk-ios"
 
-  spec.license      = "Apache-2.0 license"
+  spec.license      = "Apache-2.0"
   spec.author       = { "ButterflyMX" => "admin@butterflymx.com" }
   spec.source       = { :git => "https://github.com/runslikebutter/butterflymx-sdk-ios.git", :tag => 'v' + spec.version.to_s }
 
