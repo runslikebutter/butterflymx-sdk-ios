@@ -549,10 +549,16 @@ extension TwilioIncomingCallProcessor {
             .callRejected : .idle
         ]
         
+        // A device sits in .accepted from the moment the user answers until the room reports back.
+        // The room join can fail in that window (e.g. Twilio 53105 when another device on the unit
+        // answered first), and the user can press End while connecting — without these exits both
+        // events are dropped and the device is stranded in .accepted until the caller cancels.
         callStateMachine[.accepted] = [
             .callConnected : .ongoing,
             .callCanceledByCaller : .idle,
-            .callAnsweredByOthers : .idle
+            .callAnsweredByOthers : .idle,
+            .callDisconnected : .idle,
+            .userDeclinesCall : .idle
         ]
         
         callStateMachine[.ongoing] = [
