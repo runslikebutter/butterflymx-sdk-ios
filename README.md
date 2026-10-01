@@ -6,7 +6,7 @@ The ButterflyMX iOS SDK enables partners to integrate ButterflyMX video call and
 
 | Requirement | Minimum |
 |---|---|
-| iOS | 13.0+ |
+| iOS | 15.0+ |
 | Swift | 5.0+ |
 | Xcode | 14.0+ |
 

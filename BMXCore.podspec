@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.swift_versions = ['5']
 
   spec.cocoapods_version = '>= 1.13.0'
-  spec.ios.deployment_target = '14.0'
+  spec.ios.deployment_target = '15.0'
 
   spec.summary      = 'A Swift framework to implement ButterflyMX SDK'
   spec.homepage     = "https://github.com/runslikebutter/butterflymx-sdk-ios"

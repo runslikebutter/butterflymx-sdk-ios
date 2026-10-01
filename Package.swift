@@ -6,7 +6,7 @@ import PackageDescription
 var package = Package(
     name: "ButterflyMX",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         .library(

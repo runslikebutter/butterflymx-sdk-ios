@@ -88,6 +88,21 @@ Dependency versions are defined in `Package.swift`. When upgrading, test against
 swift build
 ```
 
+### CocoaPods lint
+
+Some dependency podspecs (Alamofire, Japx, OAuthSwift) still declare iOS 9/10 deployment targets, which Xcode 26+ refuses to build. `scripts/pod_lint_deployment_target.rb` raises them to iOS 15.0 inside the throwaway project `pod lib lint` generates; it does not affect consumers.
+
+```bash
+LANG=en_US.UTF-8 RUBYOPT="-rlogger -r./scripts/pod_lint_deployment_target.rb" pod lib lint BMXCore.podspec --allow-warnings --skip-tests
+LANG=en_US.UTF-8 RUBYOPT="-rlogger -r./scripts/pod_lint_deployment_target.rb" pod lib lint BMXCall.podspec --include-podspecs=BMXCore.podspec --allow-warnings --skip-tests
+```
+
+`-rlogger` works around an `activesupport` `Logger` load error in some CocoaPods installs. `--include-podspecs` lints `BMXCall` against the local `BMXCore` rather than the published one.
+
+### Minimum iOS version
+
+The minimum is **iOS 15.0** (the lowest Xcode 27 accepts). When changing it, keep these in sync: `Package.swift` (`platforms`), both `.podspec` files (`spec.ios.deployment_target`), `IPHONEOS_DEPLOYMENT_TARGET` in `BMXCore.xcodeproj` and `BMXCall.xcodeproj`, and the Requirements table in `README.md`. Raising it is a breaking change for consumers and must be called out in the release notes.
+
 ---
 
 ## Demo App
