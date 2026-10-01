@@ -61,12 +61,14 @@ Alternatively, open `Package.swift` directly if you only need to work on the SDK
 
 | Package | Used by | Purpose |
 |---|---|---|
-| Alamofire `5.6.1 ..< 5.10.0` | BMXCore | HTTP networking |
+| Alamofire `5.6.1 ..< 6.0.0` | BMXCore | HTTP networking |
 | OAuthSwift `~> 2.2` | BMXCore | OAuth2 flow |
-| Japx `~> 4.0` | BMXCore | JSON:API decoding |
+| Japx `~> 4.0` (core module only) | BMXCore | JSON:API decoding |
 | TwilioVideo `~> 5.8` | BMXCall | WebRTC video calls |
 
 Dependency versions are defined in `Package.swift`. When upgrading, test against the demo app before releasing.
+
+> **Note:** Japx 4.0.1's `JapxAlamofire` module doesn't compile with Alamofire 5.10+, and the upstream fix is unreleased. BMXCore therefore depends only on the Japx core module and vendors the `responseCodableJSONAPI` helper in `BMXCore/Vendor/JapxCodableAlamofire.swift`. Once Japx ships a release with the fix, this file can be replaced by the `JapxAlamofire` product again.
 
 > **Important:** `BMXCore.xcodeproj` has its own SPM dependency declarations (used when opening via `ButterflyMXSDK.xcworkspace`). When changing a dependency version in `Package.swift`, update the matching constraint in `BMXCore.xcodeproj` too, otherwise the workspace will resolve a different version than `Package.swift`.
 

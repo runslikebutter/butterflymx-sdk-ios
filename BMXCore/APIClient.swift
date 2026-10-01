@@ -8,12 +8,7 @@
 
 import Foundation
 import Alamofire
-#if COCOAPODS
 import Japx
-#else
-import Japx
-import JapxAlamofire
-#endif
 
 
 public class APIClient {
@@ -286,7 +281,7 @@ public class APIClient {
         }
     }
     
-    public class func sendRequest(path: String, params: Parameters, method: HTTPMethod, completion: @escaping ((Result<Data, AFError>) -> Void)) {
+    public class func sendRequest(path: String, params: Alamofire.Parameters, method: HTTPMethod, completion: @escaping ((Result<Data, AFError>) -> Void)) {
         let urlString = BMXCoreKit.shared.environment.backendEnvironment.baseURL + "/v3/" + path
 
         BMXCoreKit.shared.log(format: "%@", message: "urlString: \(urlString), params: \(params)", type: .debug)

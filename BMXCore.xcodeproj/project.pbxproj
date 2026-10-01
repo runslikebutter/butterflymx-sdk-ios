@@ -25,16 +25,13 @@
 		C32CEADD2256012800D7BB73 /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CEADC2256012800D7BB73 /* BuildingModel.swift */; };
 		C3728F6D2BB2C7DB00915D36 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F6C2BB2C7DB00915D36 /* OAuthSwift */; };
 		C3728F702BB2C7E900915D36 /* Japx in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F6F2BB2C7E900915D36 /* Japx */; };
-		C3728F722BB2C7E900915D36 /* JapxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F712BB2C7E900915D36 /* JapxAlamofire */; };
-		C3728F742BB2C7E900915D36 /* JapxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F732BB2C7E900915D36 /* JapxMoya */; };
-		C3728F762BB2C7E900915D36 /* JapxRxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F752BB2C7E900915D36 /* JapxRxAlamofire */; };
-		C3728F782BB2C7E900915D36 /* JapxRxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F772BB2C7E900915D36 /* JapxRxMoya */; };
 		C390814121F71EBC00A4E884 /* TokensModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390814021F71EBC00A4E884 /* TokensModel.swift */; };
 		C39809B224AE1A4D0002D9A9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FBD3D224E1A5A00D58A4E /* Utils.swift */; };
 		C3B776DC236AE0C50060AEAC /* TenantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B776DB236AE0C50060AEAC /* TenantModel.swift */; };
 		C3C2322321F2116300A84483 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C2322221F2116300A84483 /* Keychain.swift */; };
 		C3C2324B21F604BD00A84483 /* DiskCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C2324A21F604BD00A84483 /* DiskCaching.swift */; };
 		C3C93B6121F9E14200D75F2E /* BMXDoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C93B6021F9E14200D75F2E /* BMXDoor.swift */; };
+		7BDB0774F1BF78EA4462A184 /* JapxCodableAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B61EEA8C57EC06320A69A0 /* JapxCodableAlamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +59,7 @@
 		C3C2322221F2116300A84483 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		C3C2324A21F604BD00A84483 /* DiskCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCaching.swift; sourceTree = "<group>"; };
 		C3C93B6021F9E14200D75F2E /* BMXDoor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMXDoor.swift; sourceTree = "<group>"; };
+		85B61EEA8C57EC06320A69A0 /* JapxCodableAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapxCodableAlamofire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,13 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3728F742BB2C7E900915D36 /* JapxMoya in Frameworks */,
 				C31F4FFF2C4FF8C600A1705F /* Alamofire in Frameworks */,
 				C3728F6D2BB2C7DB00915D36 /* OAuthSwift in Frameworks */,
 				C3728F702BB2C7E900915D36 /* Japx in Frameworks */,
-				C3728F782BB2C7E900915D36 /* JapxRxMoya in Frameworks */,
-				C3728F722BB2C7E900915D36 /* JapxAlamofire in Frameworks */,
-				C3728F762BB2C7E900915D36 /* JapxRxAlamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +99,7 @@
 				C328BBE121EFA2330015C939 /* Auth */,
 				C328BBE421EFA2330015C939 /* Environment */,
 				C328BBDD21EFA2330015C939 /* Utils */,
+				0CF345646BDB95D7BCBC8DB6 /* Vendor */,
 				B96B3BB2216EBDE90037F586 /* ButterflyMXSDK.h */,
 				B96B3BB3216EBDE90037F586 /* Info.plist */,
 				B96B3BBA216EBE4D0037F586 /* BMXCoreKit.swift */,
@@ -160,6 +155,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0CF345646BDB95D7BCBC8DB6 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				85B61EEA8C57EC06320A69A0 /* JapxCodableAlamofire.swift */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -191,10 +194,6 @@
 			packageProductDependencies = (
 				C3728F6C2BB2C7DB00915D36 /* OAuthSwift */,
 				C3728F6F2BB2C7E900915D36 /* Japx */,
-				C3728F712BB2C7E900915D36 /* JapxAlamofire */,
-				C3728F732BB2C7E900915D36 /* JapxMoya */,
-				C3728F752BB2C7E900915D36 /* JapxRxAlamofire */,
-				C3728F772BB2C7E900915D36 /* JapxRxMoya */,
 				C31F4FFE2C4FF8C600A1705F /* Alamofire */,
 			);
 			productName = ButterflyMXSDK;
@@ -273,6 +272,7 @@
 				C39809B224AE1A4D0002D9A9 /* Utils.swift in Sources */,
 				C32CEADD2256012800D7BB73 /* BuildingModel.swift in Sources */,
 				B96B3BC3216EC20D0037F586 /* APIClient.swift in Sources */,
+				7BDB0774F1BF78EA4462A184 /* JapxCodableAlamofire.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +527,7 @@
 			requirement = {
 				kind = versionRange;
 				minimumVersion = 5.6.1;
-				maximumVersion = 5.10.0;
+				maximumVersion = 6.0.0;
 			};
 		};
 		C3728F6B2BB2C7DB00915D36 /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
@@ -563,26 +563,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
 			productName = Japx;
-		};
-		C3728F712BB2C7E900915D36 /* JapxAlamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
-			productName = JapxAlamofire;
-		};
-		C3728F732BB2C7E900915D36 /* JapxMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
-			productName = JapxMoya;
-		};
-		C3728F752BB2C7E900915D36 /* JapxRxAlamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
-			productName = JapxRxAlamofire;
-		};
-		C3728F772BB2C7E900915D36 /* JapxRxMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
-			productName = JapxRxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

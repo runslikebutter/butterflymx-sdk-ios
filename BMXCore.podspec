@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "BMXCore/**/*.swift"
 
-  spec.dependency 'Alamofire', '>= 5.6.1', '< 5.10.0'
-  spec.dependency 'Japx/Alamofire', '~> 4.0'
+  spec.dependency 'Alamofire', '>= 5.6.1', '< 6.0.0'
+  spec.dependency 'Japx/Core', '~> 4.0'
   spec.dependency 'OAuthSwift', '~> 2.2'
 
   spec.resource_bundles = {'BMXCore' => ['BMXCore/PrivacyInfo.xcprivacy']}
