@@ -15,7 +15,8 @@
 //  Why vendored: Japx 4.0.1 (latest release) ships a JapxAlamofire module that
 //  doesn't compile with Alamofire 5.10+ ('Parameters' is ambiguous). The fix is
 //  on Japx master but unreleased, so BMXCore depends on the Japx core module only
-//  and keeps the one helper it uses here.
+//  and keeps the one helper it uses here. Once Japx tags a release with the fix,
+//  delete this file and depend on the JapxAlamofire product again.
 //
 
 import Foundation
