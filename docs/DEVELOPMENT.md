@@ -134,7 +134,7 @@ The SDK follows **semantic versioning** (`MAJOR.MINOR.PATCH`). Current series is
 - **MINOR** — new public API additions, backward-compatible
 - **MAJOR** — breaking API changes
 
-Current latest: **v2.3.7**
+Current latest: **v2.4.0**
 
 ---
 
