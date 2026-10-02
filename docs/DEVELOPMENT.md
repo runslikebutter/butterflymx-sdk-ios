@@ -159,6 +159,12 @@ SPM consumers using `.upToNextMajor(from: "3.0.0")` will pick up new `3.x` tags 
 
 Create a GitHub Release from the tag with a changelog summary. Helps partners track what changed between versions.
 
+Release notes live in `docs/release-notes/vX.Y.Z.md`, added in the PR that bumps the version, so they get reviewed with the change. Create the release from that file:
+
+```bash
+gh release create v3.0.0 --title "v3.0.0" --notes-file docs/release-notes/v3.0.0.md
+```
+
 ---
 
 ## Key Architecture Notes
