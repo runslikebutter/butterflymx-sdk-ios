@@ -6,7 +6,8 @@
 //  Japx/Classes/Alamofire/JapxCodableAlamofire.swift, plus `JapxAlamofireError`
 //  from Japx/Classes/Alamofire/JapxAlamofire.swift.
 //  Copyright (c) Infinum. Licensed under the Apache License, Version 2.0
-//  (http://www.apache.org/licenses/LICENSE-2.0).
+//  (http://www.apache.org/licenses/LICENSE-2.0). The full license text is in
+//  THIRD_PARTY_NOTICES.md at the repository root.
 //
 //  Changes from the original:
 //  - Declarations are internal instead of public.
