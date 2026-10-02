@@ -54,8 +54,8 @@ public class APIClient {
         
         APIClient.sessionManager.request(urlString, method: .get, interceptor: OAuth2Handler())
             .validate()
-            .responseCodableJSONAPI(keyPath: "data", decoder: decoder) { (response: DataResponse<UserModel, AFError>) in
-                switch response.result {
+            .responseData { response in
+                switch response.result.flatMap({ decodeJSONAPIData(UserModel.self, from: $0) }) {
                 case .success(let model):
                     promise.resolve(with: model)
                 case .failure(let error):
@@ -64,6 +64,21 @@ public class APIClient {
         }
 
         return promise
+    }
+
+    private struct JSONAPIDocument<T: Decodable>: Decodable {
+        let data: T
+    }
+
+    /// Decodes the top-level `data` of a JSON:API document, resolving relationships from `included`.
+    /// Failures are reported as `AFError.responseSerializationFailed`, the same error the
+    /// previous Japx Alamofire serializer produced.
+    private static func decodeJSONAPIData<T: Decodable>(_ type: T.Type, from data: Data) -> Result<T, AFError> {
+        do {
+            return .success(try decoder.decode(JSONAPIDocument<T>.self, from: data).data)
+        } catch {
+            return .failure(.responseSerializationFailed(reason: .jsonSerializationFailed(error: error)))
+        }
     }
     
     //, completion: @escaping (Result<CallStatus, ServiceError>) -> Void)

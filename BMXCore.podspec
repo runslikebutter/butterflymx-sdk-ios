@@ -15,7 +15,6 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/runslikebutter/butterflymx-sdk-ios.git", :tag => 'v' + spec.version.to_s }
 
   spec.source_files  = "BMXCore/**/*.swift"
-  spec.preserve_paths = "THIRD_PARTY_NOTICES.md"
 
   spec.dependency 'Alamofire', '>= 5.6.1', '< 6.0.0'
   spec.dependency 'Japx/Core', '~> 4.0'
