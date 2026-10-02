@@ -61,12 +61,14 @@ Alternatively, open `Package.swift` directly if you only need to work on the SDK
 
 | Package | Used by | Purpose |
 |---|---|---|
-| Alamofire `5.6.1 ..< 5.10.0` | BMXCore | HTTP networking |
+| Alamofire `5.6.1 ..< 6.0.0` | BMXCore | HTTP networking |
 | OAuthSwift `~> 2.2` | BMXCore | OAuth2 flow |
-| Japx `~> 4.0` | BMXCore | JSON:API decoding |
+| Japx `~> 4.0` (core module only) | BMXCore | JSON:API decoding |
 | TwilioVideo `~> 5.8` | BMXCall | WebRTC video calls |
 
 Dependency versions are defined in `Package.swift`. When upgrading, test against the demo app before releasing.
+
+> **Note:** BMXCore depends on the Japx **core module only**. Don't add `JapxAlamofire` (or `Japx/Alamofire` in the podspec) back: it's the module that ties Japx to Alamofire versions, and Japx 4.0.1's version doesn't compile with Alamofire 5.10+. JSON:API responses are fetched with `.responseData` and decoded with the `JapxDecoder` in `APIClient` (see `getMe()`).
 
 > **Important:** `BMXCore.xcodeproj` has its own SPM dependency declarations (used when opening via `ButterflyMXSDK.xcworkspace`). When changing a dependency version in `Package.swift`, update the matching constraint in `BMXCore.xcodeproj` too, otherwise the workspace will resolve a different version than `Package.swift`.
 
@@ -85,6 +87,10 @@ Dependency versions are defined in `Package.swift`. When upgrading, test against
 ```bash
 swift build
 ```
+
+### Minimum iOS version
+
+The minimum is **iOS 15.0** (the lowest Xcode 27 accepts). When changing it, keep these in sync: `Package.swift` (`platforms`), both `.podspec` files (`spec.ios.deployment_target`), `IPHONEOS_DEPLOYMENT_TARGET` in `BMXCore.xcodeproj` and `BMXCall.xcodeproj`, and the Requirements table in `README.md`. Raising it is a breaking change for consumers: it requires a MAJOR version bump (see [Versioning](#versioning)) and must be called out in the release notes.
 
 ---
 
@@ -111,13 +117,13 @@ git commit -m "chore: update demo app submodule"
 
 The SDK uses **SPM with git tags** — a single tag versions both `BMXCore` and `BMXCall` together, since SPM resolves at the repository level rather than per-package.
 
-The SDK follows **semantic versioning** (`MAJOR.MINOR.PATCH`). Current series is `2.x`.
+The SDK follows **semantic versioning** (`MAJOR.MINOR.PATCH`). Current series is `3.x`.
 
 - **PATCH** — bug fixes, non-breaking changes
 - **MINOR** — new public API additions, backward-compatible
-- **MAJOR** — breaking API changes
+- **MAJOR** — breaking API changes, or raising the minimum iOS version
 
-Current latest: **v2.3.7**
+Current latest: **v3.0.0**
 
 ---
 
@@ -132,15 +138,21 @@ Ensure all changes are merged to `main` and CI is green.
 Tags must use the format `vX.Y.Z` — this is what SPM resolves against.
 
 ```bash
-git tag v2.3.8
-git push origin v2.3.8
+git tag v3.0.1
+git push origin v3.0.1
 ```
 
-SPM consumers using `.upToNextMajor(from: "2.3.7")` will pick up the new tag automatically.
+SPM consumers using `.upToNextMajor(from: "3.0.0")` will pick up new `3.x` tags automatically. A new MAJOR version is only picked up once they update their requirement.
 
 ### 3. GitHub Release (optional but recommended)
 
 Create a GitHub Release from the tag with a changelog summary. Helps partners track what changed between versions.
+
+Release notes live in `docs/release-notes/vX.Y.Z.md`, added in the PR that bumps the version, so they get reviewed with the change. Create the release from that file:
+
+```bash
+gh release create v3.0.0 --title "v3.0.0" --notes-file docs/release-notes/v3.0.0.md
+```
 
 ---
 

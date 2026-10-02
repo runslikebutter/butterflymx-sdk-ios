@@ -25,10 +25,6 @@
 		C32CEADD2256012800D7BB73 /* BuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32CEADC2256012800D7BB73 /* BuildingModel.swift */; };
 		C3728F6D2BB2C7DB00915D36 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F6C2BB2C7DB00915D36 /* OAuthSwift */; };
 		C3728F702BB2C7E900915D36 /* Japx in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F6F2BB2C7E900915D36 /* Japx */; };
-		C3728F722BB2C7E900915D36 /* JapxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F712BB2C7E900915D36 /* JapxAlamofire */; };
-		C3728F742BB2C7E900915D36 /* JapxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F732BB2C7E900915D36 /* JapxMoya */; };
-		C3728F762BB2C7E900915D36 /* JapxRxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F752BB2C7E900915D36 /* JapxRxAlamofire */; };
-		C3728F782BB2C7E900915D36 /* JapxRxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C3728F772BB2C7E900915D36 /* JapxRxMoya */; };
 		C390814121F71EBC00A4E884 /* TokensModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C390814021F71EBC00A4E884 /* TokensModel.swift */; };
 		C39809B224AE1A4D0002D9A9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35FBD3D224E1A5A00D58A4E /* Utils.swift */; };
 		C3B776DC236AE0C50060AEAC /* TenantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B776DB236AE0C50060AEAC /* TenantModel.swift */; };
@@ -69,13 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3728F742BB2C7E900915D36 /* JapxMoya in Frameworks */,
 				C31F4FFF2C4FF8C600A1705F /* Alamofire in Frameworks */,
 				C3728F6D2BB2C7DB00915D36 /* OAuthSwift in Frameworks */,
 				C3728F702BB2C7E900915D36 /* Japx in Frameworks */,
-				C3728F782BB2C7E900915D36 /* JapxRxMoya in Frameworks */,
-				C3728F722BB2C7E900915D36 /* JapxAlamofire in Frameworks */,
-				C3728F762BB2C7E900915D36 /* JapxRxAlamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,10 +183,6 @@
 			packageProductDependencies = (
 				C3728F6C2BB2C7DB00915D36 /* OAuthSwift */,
 				C3728F6F2BB2C7E900915D36 /* Japx */,
-				C3728F712BB2C7E900915D36 /* JapxAlamofire */,
-				C3728F732BB2C7E900915D36 /* JapxMoya */,
-				C3728F752BB2C7E900915D36 /* JapxRxAlamofire */,
-				C3728F772BB2C7E900915D36 /* JapxRxMoya */,
 				C31F4FFE2C4FF8C600A1705F /* Alamofire */,
 			);
 			productName = ButterflyMXSDK;
@@ -331,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -389,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -424,7 +412,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/BMXCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				"LD_MAP_FILE_PATH[arch=*]" = "$(TARGET_TEMP_DIR)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,7 +461,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/BMXCore/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,7 +515,7 @@
 			requirement = {
 				kind = versionRange;
 				minimumVersion = 5.6.1;
-				maximumVersion = 5.10.0;
+				maximumVersion = 6.0.0;
 			};
 		};
 		C3728F6B2BB2C7DB00915D36 /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
@@ -563,26 +551,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
 			productName = Japx;
-		};
-		C3728F712BB2C7E900915D36 /* JapxAlamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
-			productName = JapxAlamofire;
-		};
-		C3728F732BB2C7E900915D36 /* JapxMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
-			productName = JapxMoya;
-		};
-		C3728F752BB2C7E900915D36 /* JapxRxAlamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
-			productName = JapxRxAlamofire;
-		};
-		C3728F772BB2C7E900915D36 /* JapxRxMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3728F6E2BB2C7E900915D36 /* XCRemoteSwiftPackageReference "Japx" */;
-			productName = JapxRxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
