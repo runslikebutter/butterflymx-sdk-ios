@@ -15,8 +15,13 @@
 //  Why vendored: Japx 4.0.1 (latest release) ships a JapxAlamofire module that
 //  doesn't compile with Alamofire 5.10+ ('Parameters' is ambiguous). The fix is
 //  on Japx master but unreleased, so BMXCore depends on the Japx core module only
-//  and keeps the one helper it uses here. Once Japx tags a release with the fix,
-//  delete this file and depend on the JapxAlamofire product again.
+//  and keeps the one helper it uses here.
+//
+//  TODO(MT-3128): Once Japx tags a release with the fix, delete this file and
+//  depend on the JapxAlamofire product again. That also means restoring the
+//  `#if COCOAPODS` import in APIClient.swift, going back to `Japx/Alamofire` in
+//  the podspec, and raising the Japx minimum to the fixed release. See MT-3128
+//  for the full checklist.
 //
 
 import Foundation

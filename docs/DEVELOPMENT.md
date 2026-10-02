@@ -68,7 +68,7 @@ Alternatively, open `Package.swift` directly if you only need to work on the SDK
 
 Dependency versions are defined in `Package.swift`. When upgrading, test against the demo app before releasing.
 
-> **Note:** Japx 4.0.1's `JapxAlamofire` module doesn't compile with Alamofire 5.10+, and the upstream fix is unreleased. BMXCore therefore depends only on the Japx core module and vendors the `responseCodableJSONAPI` helper in `BMXCore/Vendor/JapxCodableAlamofire.swift`. Once Japx ships a release with the fix, this file can be replaced by the `JapxAlamofire` product again.
+> **Note:** Japx 4.0.1's `JapxAlamofire` module doesn't compile with Alamofire 5.10+, and the upstream fix is unreleased. BMXCore therefore depends only on the Japx core module and vendors the `responseCodableJSONAPI` helper in `BMXCore/Vendor/JapxCodableAlamofire.swift`. Once Japx ships a release with the fix, this file can be replaced by the `JapxAlamofire` product again. [MT-3128](https://butterflymx.atlassian.net/browse/MT-3128) tracks the full revert, including raising the Japx minimum to the fixed release.
 
 > **Important:** `BMXCore.xcodeproj` has its own SPM dependency declarations (used when opening via `ButterflyMXSDK.xcworkspace`). When changing a dependency version in `Package.swift`, update the matching constraint in `BMXCore.xcodeproj` too, otherwise the workspace will resolve a different version than `Package.swift`.
 
