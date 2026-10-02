@@ -54,7 +54,8 @@ public class APIClient {
         
         APIClient.sessionManager.request(urlString, method: .get, interceptor: OAuth2Handler())
             .validate()
-            .responseData { response in
+            // No empty-response codes: an empty body (even on 204) fails with inputDataNilOrZeroLength.
+            .responseData(emptyResponseCodes: []) { response in
                 switch response.result.flatMap({ decodeJSONAPIData(UserModel.self, from: $0) }) {
                 case .success(let model):
                     promise.resolve(with: model)
