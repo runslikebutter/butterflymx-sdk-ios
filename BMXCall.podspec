@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'BMXCall'
-  spec.version = '2.4.0'
+  spec.version = '3.0.0'
   spec.swift_versions = ['5']
 
   spec.cocoapods_version = '>= 1.13.0'
@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
 
   spec.source_files  = "BMXCall/**/*.swift"
 
-  spec.dependency 'BMXCore', '~> 2.4.0'
+  spec.dependency 'BMXCore', '~> 3.0.0'
   spec.dependency 'TwilioVideo', '~> 5.8.1'
 
   spec.resource_bundles = {'BMXCall' => ['BMXCall/PrivacyInfo.xcprivacy']}
